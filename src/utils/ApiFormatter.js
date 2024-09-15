@@ -23,7 +23,7 @@ class ApiFormatter {
 				})),
 			},
 			weeklyData: data.days.map((value) => ({
-				day: format(value.datetime, "EEEE"),
+				day: format(value.datetime, "EEE"),
 				temperature: value.temp,
 				temperatureMin: value.tempmin,
 				temperatureMax: value.tempmax,
