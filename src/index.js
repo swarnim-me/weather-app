@@ -1,9 +1,9 @@
 import "./styles.css";
 import WeatherService from "./services/WeatherService";
 
-const api = new WeatherService();
+const api = new WeatherService("Paris");
 
-api.fetchWeatherData("Paris")
+api.fetchWeatherData()
 	.then((response) => {
 		console.log(response);
 	})
