@@ -1,0 +1,35 @@
+.current-panel {
+	display: grid;
+	gap: 8px;
+	place-content: center;
+	justify-items: center;
+}
+
+.current-panel .temperature-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.current-panel .temperature-wrapper img {
+	width: 150px;
+}
+
+.current-panel .temperature {
+	font-family: "Poppins-ExtraBold";
+	font-size: clamp(3rem, 5vw, 5rem);
+}
+
+.current-panel .city {
+	font-size: 1.2rem;
+	font-family: "Poppins-Medium";
+}
+
+.current-panel .conditions {
+	font-family: "Poppins-Light";
+}
+
+.current-panel .date {
+	font-family: "Poppins-Bold";
+	font-size: 1.5rem;
+}

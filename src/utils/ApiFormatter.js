@@ -3,9 +3,10 @@ import { format } from "date-fns";
 class ApiFormatter {
 	formatData(data) {
 		const formattedResponse = {
-			timezone: data.timezone,
+			location: data.resolvedAddress,
 			currentDay: {
-				descriptoin: data.currentConditions.conditions,
+				date: format(data.days[0].datetime, "io MMMM, yyyy"),
+				description: data.currentConditions.conditions,
 				temperature: data.currentConditions.temp,
 				feelsLike: data.currentConditions.feelslike,
 				humidity: data.currentConditions.humidity,

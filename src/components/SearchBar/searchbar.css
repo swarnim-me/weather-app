@@ -1,0 +1,28 @@
+form.search-bar {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+form.search-bar .location-input {
+	border: none;
+	font-size: 1rem;
+	padding: 12px;
+	font-weight: 200;
+	width: min(600px, 90%);
+	border-radius: 8px;
+}
+
+form.search-bar .search-btn {
+	background-color: var(--primary-clr);
+	font-size: 1rem;
+	color: var(--inverted-font-clr);
+	padding-inline: 40px;
+	border-radius: 8px;
+	border: none;
+}
+
+.location-input {
+	outline: none;
+	font-family: "Poppins-Light";
+}
