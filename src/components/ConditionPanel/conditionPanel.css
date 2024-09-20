@@ -1,0 +1,36 @@
+.conditions-panel {
+	padding: 28px;
+}
+
+.conditions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+	height: 100%;
+	align-items: center;
+	justify-items: stretch;
+	gap: 20px;
+}
+
+.condition-item {
+	display: flex;
+	gap: 8px;
+}
+
+.condition-icon {
+	width: 32px;
+}
+
+.condition-title {
+	font-size: 0.8rem;
+	font-family: "Poppins-Light";
+}
+
+.condition-value {
+	font-size: 1.6rem;
+}
+
+@media (max-width: 800px) {
+	.conditions-grid {
+		gap: 32px;
+	}
+}

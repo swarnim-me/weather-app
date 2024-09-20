@@ -19,7 +19,7 @@ class CurrentPanel {
 
 	updateWeather(data) {
 		this.cityEle.textContent = data.location;
-		this.temperatureEle.textContent = data.currentDay.temperature + " °C";
+		this.temperatureEle.textContent = data.currentDay.temperature + "°C";
 		this.conditionsEle.textContent = data.currentDay.description;
 		this.dateEle.textContent = data.currentDay.date;
 	}

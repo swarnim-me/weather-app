@@ -1,4 +1,5 @@
 import currentPanel from "../components/CurrentPanel/CurrentPanel";
+import conditionPanel from "../components/ConditionPanel/ConditionPanel";
 import "../components/SearchBar/SearchBar";
 
 class RenderController {
@@ -6,6 +7,7 @@ class RenderController {
 
 	updateWeather(data) {
 		currentPanel.updateWeather(data);
+		conditionPanel.updateConditions(data);
 	}
 }
 
