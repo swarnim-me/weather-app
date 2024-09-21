@@ -1,3 +1,4 @@
+import toast from "../components/ToastMessage/ToastMessage";
 import WeatherService from "../services/WeatherService";
 import renderController from "./RenderController";
 
@@ -9,9 +10,22 @@ class ApplicationController {
 
 	async changeCity(city) {
 		this.api.changeCity(city);
-		const response = await this.fetchWeather();
-		console.log(response);
-		renderController.updateWeather(response);
+
+		try {
+			const response = await this.fetchWeather();
+			renderController.updateWeather(response);
+			toast.makeToast({
+				type: "success",
+				title: "Success",
+				message: "Data fetched successfully",
+			});
+		} catch {
+			toast.makeToast({
+				type: "error",
+				title: "Error",
+				message: "Error happened while fetching API",
+			});
+		}
 	}
 
 	fetchWeather() {

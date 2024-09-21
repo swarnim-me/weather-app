@@ -1,25 +1,15 @@
 import "./conditionPanel.css";
-import thermometerIcon from "../../assets/icons/thermometer.svg";
-import dropletIcon from "../../assets/icons/droplet.svg";
-import rainIcon from "../../assets/icons/cloud-rain.svg";
-import sunRainIcon from "../../assets/icons/cloud-sun-rain.svg";
-import windIcon from "../../assets/icons/wind.svg";
-import waveIcon from "../../assets/icons/waves.svg";
-import gaugeIcon from "../../assets/icons/gauge.svg";
-import cloudIcon from "../../assets/icons/cloud.svg";
-import sunIcon from "../../assets/icons/sun.svg";
+import thermometerIcon from "../../assets/icons/conditions/thermometer.svg";
+import dropletIcon from "../../assets/icons/conditions/droplet.svg";
+import rainIcon from "../../assets/icons/conditions/cloud-rain.svg";
+import sunRainIcon from "../../assets/icons/conditions/cloud-sun-rain.svg";
+import windIcon from "../../assets/icons/conditions/wind.svg";
+import waveIcon from "../../assets/icons/conditions/waves.svg";
+import gaugeIcon from "../../assets/icons/conditions/gauge.svg";
+import cloudIcon from "../../assets/icons/conditions/cloud.svg";
+import sunIcon from "../../assets/icons/conditions/sun.svg";
 
 class ConditionPanel {
-	// Template:
-	//     <div class="feels-like condition-item">
-	//      <img
-	//         src="./assets/icons/thermometer.svg"
-	//         alt=""
-	//         class="condition-icon icon"
-	//      />
-	//      <p class="condition-title">Feels like</p>
-	//      <p class="condition-value">45°C</p>
-	//     </div>
 	constructor() {
 		this.conditionsGridEle = document.querySelector(".conditions-grid");
 	}

@@ -61,7 +61,7 @@ main {
 	src: url("./assets/fonts/Poppins/Poppins-Medium.ttf");
 }
 .dashboard {
-	width: min(1320px, 90%);
+	width: min(1320px, 100%);
 	flex: 1;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -73,6 +73,7 @@ main {
 .panel {
 	background: var(--panel-clr);
 	border-radius: 8px;
+	width: 100%;
 }
 
 .current-panel {

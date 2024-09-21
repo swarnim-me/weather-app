@@ -1,0 +1,96 @@
+:root {
+	--success: #1ccb55;
+	--success-bg: #eefbf4;
+	--error: #ff3c3d;
+	--error-bg: #ffeded;
+	--info: #06a7fc;
+	--info-bg: #e8f6ff;
+}
+
+.toast-message {
+	visibility: hidden;
+	display: flex;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	gap: 20px;
+	padding: 12px 20px;
+	border-radius: 8px;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.5s linear;
+}
+
+.toast-message.show-toast {
+	opacity: 1;
+}
+
+.toast-message.hide-toast {
+	opacity: 0;
+}
+
+.toast-icon {
+	aspect-ratio: 1 / 1;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.toast-message.success {
+	border-left: 8px solid var(--success);
+	background: var(--success-bg);
+}
+
+.toast-message.success .toast-icon {
+	background-image: url("../../assets/icons/toast/tick.svg");
+}
+
+.toast-message.success .toast-title,
+.toast-message.success .toast-description {
+	color: var(--success);
+}
+
+.toast-message.error {
+	border-left: 8px solid var(--error);
+	background: var(--error-bg);
+}
+
+.toast-message.error .toast-icon {
+	background-image: url("../../assets/icons/toast/error.svg");
+}
+
+.toast-message.error .toast-title,
+.toast-message.error .toast-description {
+	color: var(--error);
+}
+
+.toast-message.info {
+	border-left: 8px solid var(--info);
+	background: var(--info-bg);
+}
+
+.toast-message.info .toast-icon {
+	background-image: url("../../assets/icons/toast/info.svg");
+}
+
+.toast-message.info .toast-title,
+.toast-message.info .toast-description {
+	color: var(--info);
+}
+
+.toast-title {
+	font-family: "Poppins-SemiBold";
+}
+
+.toast-description {
+	font-family: "Poppins-Light";
+}
+
+/* Remove toast message on smaller screens */
+
+@media (max-width: 800px) {
+	.toast-message {
+		display: none;
+	}
+}
