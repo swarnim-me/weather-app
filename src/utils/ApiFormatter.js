@@ -5,6 +5,7 @@ class ApiFormatter {
 		const formattedResponse = {
 			location: data.resolvedAddress,
 			currentDay: {
+				icon: data.currentConditions.icon,
 				date: format(data.days[0].datetime, "io MMMM, yyyy"),
 				description: data.currentConditions.conditions,
 				temperature: data.currentConditions.temp,
@@ -21,6 +22,7 @@ class ApiFormatter {
 					temp: value.temp,
 					time: value.datetime,
 					description: value.conditions,
+					icon: value.icon,
 				})),
 			},
 			weeklyData: data.days.map((value) => ({
@@ -28,6 +30,7 @@ class ApiFormatter {
 				temperature: value.temp,
 				temperatureMin: value.tempmin,
 				temperatureMax: value.tempmax,
+				icon: value.icon,
 			})),
 		};
 

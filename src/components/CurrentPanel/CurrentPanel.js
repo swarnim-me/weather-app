@@ -1,4 +1,5 @@
 import "./currentPanel.css";
+import iconMapper from "../../utils/IconMapper";
 
 class CurrentPanel {
 	constructor() {
@@ -21,6 +22,7 @@ class CurrentPanel {
 		this.cityEle.textContent = data.location;
 		this.temperatureEle.textContent = data.currentDay.temperature + "°C";
 		this.conditionsEle.textContent = data.currentDay.description;
+		this.temperatureIconEle.src = iconMapper.getIcon(data.currentDay.icon);
 		this.dateEle.textContent = data.currentDay.date;
 	}
 }
