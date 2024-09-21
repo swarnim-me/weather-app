@@ -8,6 +8,12 @@ class CurrentPanel {
 		this.temperatureEle = document.querySelector(
 			".current-panel .temperature-wrapper .temperature"
 		);
+		this.temperatureMinEle = document.querySelector(
+			".current-panel .temperature-wrapper .temperature-min h3"
+		);
+		this.temperatureMaxEle = document.querySelector(
+			".current-panel .temperature-wrapper .temperature-max h3"
+		);
 		this.temperatureIconEle = document.querySelector(
 			".current-panel .temperature-wrapper img"
 		);
@@ -21,6 +27,8 @@ class CurrentPanel {
 	updateWeather(data) {
 		this.cityEle.textContent = data.location;
 		this.temperatureEle.textContent = data.currentDay.temperature + "°C";
+		this.temperatureMinEle.textContent = data.weeklyData[0].temperatureMin;
+		this.temperatureMaxEle.textContent = data.weeklyData[0].temperatureMax;
 		this.conditionsEle.textContent = data.currentDay.description;
 		this.temperatureIconEle.src = iconMapper.getIcon(data.currentDay.icon);
 		this.dateEle.textContent = data.currentDay.date;

@@ -19,12 +19,13 @@ class ApplicationController {
 				title: "Success",
 				message: "Data fetched successfully",
 			});
-		} catch {
+		} catch (error) {
 			toast.makeToast({
 				type: "error",
 				title: "Error",
 				message: "Error happened while fetching API",
 			});
+			console.log(error);
 		}
 	}
 
