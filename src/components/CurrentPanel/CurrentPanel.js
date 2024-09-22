@@ -26,8 +26,10 @@ class CurrentPanel {
 
 	updateWeather(data) {
 		this.cityEle.textContent = data.location;
-		this.temperatureEle.textContent = data.currentDay.temperature + "°C";
-		this.temperatureMinEle.textContent = data.weeklyData[0].temperatureMin;
+		this.temperatureEle.textContent = data.currentDay.temperature + " °C";
+		this.temperatureMinEle.textContent = data.weeklyData[0].temperatureMin
+			.toString()
+			.toLowerCase();
 		this.temperatureMaxEle.textContent = data.weeklyData[0].temperatureMax;
 		this.conditionsEle.textContent = data.currentDay.description;
 		this.temperatureIconEle.src = iconMapper.getIcon(data.currentDay.icon);

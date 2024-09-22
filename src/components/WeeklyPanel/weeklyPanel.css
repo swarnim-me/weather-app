@@ -1,0 +1,77 @@
+.weekly-panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 28px;
+}
+
+.week-cards {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.week-day {
+	order: 1;
+	font-family: "Poppins-Bold";
+	font-size: 3rem;
+}
+
+.week-card {
+	padding: 8px;
+	background: #f9f9f9;
+	border-radius: 8px;
+	display: flex;
+	gap: 4px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.week-card .temperature {
+	font-size: 2rem;
+	order: 3;
+}
+
+.week-card .temperature-minmax {
+	order: 4;
+	flex-direction: row;
+}
+
+.weekly-panel .day-icon {
+	order: 2;
+	width: 80%;
+}
+
+.week-card:first-child .week-day {
+	color: var(--primary-clr);
+}
+
+@media (max-width: 800px) {
+	.week-card {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.week-card .temperature {
+		font-size: 1rem;
+		order: 3;
+	}
+
+	.weekly-panel .day-icon {
+		order: 1;
+	}
+
+	.week-day {
+		order: 2;
+		font-size: 2rem;
+	}
+	.weekly-panel .day-icon {
+		width: 20%;
+	}
+
+	.week-card .temperature-minmax {
+		flex-direction: column;
+	}
+}
