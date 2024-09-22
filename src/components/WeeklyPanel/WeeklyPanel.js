@@ -27,6 +27,9 @@ class WeeklyPanel {
 		currentWeatherEle.src = iconMapper.getIcon(data.icon);
 		currentWeatherEle.classList.add("day-icon");
 
+		const headerWrapper = document.createElement("div");
+		headerWrapper.classList.add("card-header");
+
 		const temperatureEle = document.createElement("h1");
 		temperatureEle.textContent = data.temperature + " °C";
 		temperatureEle.classList.add("temperature");
@@ -58,12 +61,9 @@ class WeeklyPanel {
 
 		minmaxWrapper.append(minWrapper, maxWrapper);
 
-		cardWrapperEle.append(
-			cardTitleEle,
-			currentWeatherEle,
-			temperatureEle,
-			minmaxWrapper
-		);
+		headerWrapper.append(cardTitleEle, temperatureEle);
+
+		cardWrapperEle.append(currentWeatherEle, headerWrapper, minmaxWrapper);
 
 		return cardWrapperEle;
 	}

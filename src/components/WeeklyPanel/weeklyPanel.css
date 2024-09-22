@@ -13,7 +13,6 @@
 }
 
 .week-day {
-	order: 1;
 	font-family: "Poppins-Bold";
 	font-size: 3rem;
 }
@@ -30,18 +29,20 @@
 }
 
 .week-card .temperature {
+	font-family: "Poppins-Light";
 	font-size: 2rem;
-	order: 3;
 }
 
 .week-card .temperature-minmax {
-	order: 4;
 	flex-direction: row;
 }
 
 .weekly-panel .day-icon {
-	order: 2;
 	width: 80%;
+}
+
+.card-header {
+	text-align: center;
 }
 
 .week-card:first-child .week-day {
@@ -56,15 +57,12 @@
 
 	.week-card .temperature {
 		font-size: 1rem;
-		order: 3;
 	}
 
 	.weekly-panel .day-icon {
-		order: 1;
 	}
 
 	.week-day {
-		order: 2;
 		font-size: 2rem;
 	}
 	.weekly-panel .day-icon {
