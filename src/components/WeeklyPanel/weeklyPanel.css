@@ -49,7 +49,7 @@
 	color: var(--primary-clr);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 	.week-card {
 		flex-direction: row;
 		justify-content: space-between;

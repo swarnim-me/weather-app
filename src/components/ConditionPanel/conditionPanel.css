@@ -29,7 +29,7 @@
 	font-size: 1.6rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 	.conditions-grid {
 		gap: 32px;
 	}

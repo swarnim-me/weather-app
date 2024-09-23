@@ -63,7 +63,7 @@
 	width: 16px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 	.current-panel .temperature-wrapper {
 		flex-direction: column;
 		gap: 0px;
