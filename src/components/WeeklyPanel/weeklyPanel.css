@@ -8,7 +8,7 @@
 .week-cards {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 	gap: 20px;
 }
 
@@ -19,7 +19,7 @@
 
 .week-card {
 	padding: 8px;
-	background: #f9f9f9;
+	background: var(--card-clr);
 	border-radius: 8px;
 	display: flex;
 	gap: 4px;

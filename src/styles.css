@@ -3,6 +3,7 @@
 	--font-clr: #404040;
 	--primary-clr: #ec4c69;
 	--panel-clr: #ffffff;
+	--card-clr: #f9f9f9;
 	--inverted-font-clr: #ffffff;
 
 	--breakpoint: 1200px;
@@ -15,6 +16,10 @@
 	font-family: "Poppins";
 	/* For debugging */
 	/* outline: 1px solid red; */
+}
+
+.active {
+	color: var(--primary-clr);
 }
 
 main {

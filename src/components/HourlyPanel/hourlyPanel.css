@@ -1,0 +1,65 @@
+.hourly-panel {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+}
+
+.hour-cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 8px;
+	width: 100%;
+}
+
+.hour-card .temperature {
+	font-family: "Poppins-Light";
+}
+
+.hour-time {
+	font-size: 1.3rem;
+	white-space: nowrap;
+	font-family: "Poppins-Bold";
+}
+
+.hour-data {
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+	gap: 20px;
+}
+
+.hour-weather {
+	width: 55px;
+}
+
+.hour-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 8px;
+	gap: 20px;
+	align-items: center;
+	justify-items: center;
+	background: var(--card-clr);
+	border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+	.hour-card {
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 8px;
+		gap: 20px;
+		align-items: center;
+		justify-items: center;
+		background: var(--card-clr);
+		border-radius: 8px;
+		gap: 0;
+	}
+	.hour-weather {
+		justify-self: flex-start;
+	}
+
+	.hour-data {
+		width: 100%;
+		justify-content: space-between;
+	}
+}

@@ -6,7 +6,7 @@ class ApiFormatter {
 			location: data.resolvedAddress,
 			currentDay: {
 				icon: data.currentConditions.icon,
-				date: format(data.days[0].datetime, "io MMMM, yyyy"),
+				date: format(data.days[0].datetime, "do MMMM, yyyy"),
 				description: data.currentConditions.conditions,
 				temperature: data.currentConditions.temp,
 				feelsLike: data.currentConditions.feelslike,
@@ -18,7 +18,7 @@ class ApiFormatter {
 				pressure: data.currentConditions.pressure,
 				cloudCover: data.currentConditions.cloudcover,
 				uvIndex: data.currentConditions.uvindex,
-				hourWiseData: data.days[0].hours.map((value) => ({
+				hourlyData: data.days[0].hours.map((value) => ({
 					temp: value.temp,
 					time: value.datetime,
 					description: value.conditions,
