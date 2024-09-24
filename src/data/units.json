@@ -1,0 +1,18 @@
+{
+	"metric": {
+		"temperature": "°C",
+		"precipitation": "mm",
+		"snow": "cm",
+		"wind": "km/h",
+		"visibility": "km",
+		"pressure": "mbar"
+	},
+	"us": {
+		"temperature": "°F",
+		"precipitation": "in",
+		"snow": "in",
+		"wind": "mph",
+		"visibility": "miles",
+		"pressure": "mbar"
+	}
+}

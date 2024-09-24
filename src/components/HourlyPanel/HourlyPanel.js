@@ -1,5 +1,6 @@
 import iconMapper from "../../utils/IconMapper";
 import "./hourlyPanel.css";
+import unitConvertor from "../../utils/UnitConvertor";
 
 class HourlyPanel {
 	constructor() {
@@ -14,11 +15,11 @@ class HourlyPanel {
 		let endIndex = now + margin;
 
 		if (startIndex < 0) {
+			endIndex -= startIndex;
 			startIndex = 0;
-			endIndex += margin;
 		} else if (endIndex > 23) {
+			startIndex -= endIndex - 23;
 			endIndex = 23;
-			startIndex -= margin;
 		}
 		this.wrapperEle.innerHTML = "";
 		let isActive = false;
@@ -46,6 +47,7 @@ class HourlyPanel {
 	}
 
 	createHourCard(data, isActive) {
+		const unit = " " + unitConvertor.getCurrentUnits().temperature;
 		const hourCardEle = document.createElement("div");
 		hourCardEle.classList.add("hour-card");
 
@@ -63,7 +65,7 @@ class HourlyPanel {
 
 		const temperatureEle = document.createElement("h3");
 		temperatureEle.classList.add("temperature");
-		temperatureEle.textContent = data.temp + " °C";
+		temperatureEle.textContent = data.temp + unit;
 
 		hourCardEle.append(weatherImgEle, hourTimeEle, temperatureEle);
 

@@ -1,6 +1,7 @@
 import toast from "../components/ToastMessage/ToastMessage";
 import WeatherService from "../services/WeatherService";
 import renderController from "./RenderController";
+import databaseController from "./DatabaseController";
 
 class ApplicationController {
 	constructor() {

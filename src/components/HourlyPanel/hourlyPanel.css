@@ -1,7 +1,7 @@
 .hourly-panel {
 	padding: 8px;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 }
 
 .hour-cards {
@@ -36,11 +36,12 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding: 8px;
+	padding-block: 12px;
 	gap: 20px;
-	align-items: center;
 	justify-items: center;
 	background: var(--card-clr);
 	border-radius: 8px;
+	align-items: center;
 }
 
 @media (max-width: 1200px) {

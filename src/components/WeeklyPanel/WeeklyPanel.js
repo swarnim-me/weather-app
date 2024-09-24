@@ -1,6 +1,7 @@
 import DownArrow from "../../assets/icons/misc/down-arrow.svg";
 import UpArrow from "../../assets/icons/misc/up-arrow.svg";
 import iconMapper from "../../utils/IconMapper";
+import unitConvertor from "../../utils/UnitConvertor";
 import "./weeklyPanel.css";
 
 class WeeklyPanel {
@@ -16,6 +17,7 @@ class WeeklyPanel {
 	}
 
 	createCard(data) {
+		const unit = " " + unitConvertor.getCurrentUnits().temperature;
 		const cardWrapperEle = document.createElement("div");
 		cardWrapperEle.classList.add("week-card");
 
@@ -31,7 +33,7 @@ class WeeklyPanel {
 		headerWrapper.classList.add("card-header");
 
 		const temperatureEle = document.createElement("h1");
-		temperatureEle.textContent = data.temperature + " °C";
+		temperatureEle.textContent = data.temperature + unit;
 		temperatureEle.classList.add("temperature");
 
 		const minmaxWrapper = document.createElement("div");

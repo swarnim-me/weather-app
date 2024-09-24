@@ -8,6 +8,7 @@ import waveIcon from "../../assets/icons/conditions/waves.svg";
 import gaugeIcon from "../../assets/icons/conditions/gauge.svg";
 import cloudIcon from "../../assets/icons/conditions/cloud.svg";
 import sunIcon from "../../assets/icons/conditions/sun.svg";
+import unitConvertor from "../../utils/UnitConvertor";
 
 class ConditionPanel {
 	constructor() {
@@ -15,11 +16,13 @@ class ConditionPanel {
 	}
 
 	updateConditions(data) {
+		const units = unitConvertor.getCurrentUnits();
 		const conditions = [
 			{
 				title: "Feels like",
 				icon: thermometerIcon,
 				value: data.currentDay.feelsLike,
+				unit: " " + units.temperature,
 			},
 			{
 				title: "Humidity",
@@ -30,6 +33,7 @@ class ConditionPanel {
 				title: "Rain Chance",
 				icon: rainIcon,
 				value: data.currentDay.rainChance,
+				unit: " %",
 			},
 			{
 				title: "Weather Type",
@@ -40,6 +44,7 @@ class ConditionPanel {
 				title: "Wind Speed",
 				icon: windIcon,
 				value: data.currentDay.windSpeed,
+				unit: " " + units.wind,
 			},
 			{
 				title: "Wind Direction",
@@ -50,6 +55,7 @@ class ConditionPanel {
 				title: "Pressure",
 				icon: gaugeIcon,
 				value: data.currentDay.pressure,
+				unit: " " + units.pressure,
 			},
 			{
 				title: "Cloud Cover",
@@ -81,6 +87,12 @@ class ConditionPanel {
 			const conditionValueEle = document.createElement("p");
 			conditionValueEle.classList.add("condition-value");
 			conditionValueEle.textContent = data.value ?? "NA";
+
+			const unitEle = document.createElement("span");
+			unitEle.classList.add("unit");
+			unitEle.textContent = data.unit ?? "";
+
+			conditionValueEle.appendChild(unitEle);
 
 			conditionDataEle.append(conditionTitleEle, conditionValueEle);
 
