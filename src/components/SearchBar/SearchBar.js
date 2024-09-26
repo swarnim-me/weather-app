@@ -14,7 +14,7 @@ class SearchBar {
 			const searchLocation = this.locationInputEle.value;
 			this.locationInputEle.value = "";
 			if (searchLocation && searchLocation.length != 0) {
-				applicationController.changeCity(searchLocation);
+				applicationController.updateCity(searchLocation);
 			}
 		});
 	}

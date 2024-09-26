@@ -8,7 +8,6 @@ class HourlyPanel {
 	}
 
 	updateHours(data) {
-		console.log(data.currentDay);
 		const margin = 4;
 		const now = new Date().getHours();
 		let startIndex = now - margin;

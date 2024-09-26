@@ -21,6 +21,11 @@ class WeatherService {
 		this.api = this.buildApiString();
 	}
 
+	changeUnit(unit) {
+		this.unit = unit;
+		this.api = this.buildApiString();
+	}
+
 	buildApiString() {
 		return `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${this.city}?unitGroup=${this.unit}&key=${this.API_KEY}&contentType=json`;
 	}

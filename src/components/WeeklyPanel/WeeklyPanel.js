@@ -43,6 +43,7 @@ class WeeklyPanel {
 		minWrapper.classList.add("temperature-min");
 
 		const minImgEle = document.createElement("img");
+		minImgEle.classList.add("icon");
 		minImgEle.src = DownArrow;
 
 		const minValueEle = document.createElement("h3");
@@ -54,6 +55,7 @@ class WeeklyPanel {
 		maxWrapper.classList.add("temperature-max");
 
 		const maxImgEle = document.createElement("img");
+		maxImgEle.classList.add("icon");
 		maxImgEle.src = UpArrow;
 
 		const maxValueEle = document.createElement("h3");

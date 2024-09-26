@@ -15,6 +15,10 @@ class DatabaseController {
 		return JSON.parse(localStorage.getItem("data"));
 	}
 
+	updateDb(data) {
+		localStorage.setItem("data", JSON.stringify(data));
+	}
+
 	getCurrentUnit() {
 		return this.getActiveDb().unit;
 	}

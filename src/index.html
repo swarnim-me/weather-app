@@ -65,5 +65,37 @@
 				<div class="toast-description">Data fetched successfully</div>
 			</div>
 		</div>
+		<dialog class="settings-modal">
+			<div class="dialog-title">
+				<img src="./assets/icons/misc/settings.svg" alt="" />
+				<h1>Settings</h1>
+			</div>
+			<form class="settings-form">
+				<div class="close-btn">
+					<img
+						src="./assets/icons/misc/close.svg"
+						alt="Close button"
+					/>
+				</div>
+				<div class="form-field">
+					<label for="theme-input"> Theme </label>
+					<select name="theme" id="theme-input">
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+					</select>
+				</div>
+				<div class="form-field">
+					<label for="unit-input"> Unit </label>
+					<select name="unit" id="unit-input">
+						<option value="metric">Metric</option>
+						<option value="us">US</option>
+					</select>
+				</div>
+				<button class="settings-apply-btn">Apply</button>
+			</form>
+		</dialog>
+		<button class="settings-btn">
+			<img src="./assets/icons/misc/settings.svg" alt="" />
+		</button>
 	</body>
 </html>

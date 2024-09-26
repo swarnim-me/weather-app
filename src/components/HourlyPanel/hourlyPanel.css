@@ -33,6 +33,7 @@
 }
 
 .hour-card {
+	color: var(--font-clr);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding: 8px;

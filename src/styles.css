@@ -3,10 +3,24 @@
 	--font-clr: #404040;
 	--primary-clr: #ec4c69;
 	--panel-clr: #ffffff;
+	--dark-panel-clr: #f0f0f0;
 	--card-clr: #f9f9f9;
 	--inverted-font-clr: #ffffff;
-
 	--breakpoint: 1200px;
+}
+
+.dark-mode {
+	--background-clr: #1c1c1c;
+	--font-clr: #fff;
+	--primary-clr: #ec4c69;
+	--panel-clr: #252525;
+	--dark-panel-clr: #252525;
+	--card-clr: #2e2e2e;
+	--inverted-font-clr: #ffffff;
+}
+
+.dark-mode .icon {
+	filter: invert(1);
 }
 
 * {

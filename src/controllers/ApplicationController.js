@@ -6,27 +6,40 @@ import databaseController from "./DatabaseController";
 class ApplicationController {
 	constructor() {
 		this.api = new WeatherService();
-		this.changeCity("Bengaluru");
+		this.city = "Bengaluru";
+		this.changeCity();
+		renderController.updateSettings(databaseController.getActiveDb());
+		renderController.updateTheme(databaseController.getActiveDb());
 	}
 
-	async changeCity(city) {
-		this.api.changeCity(city);
+	updateDb(data) {
+		databaseController.updateDb(data);
+	}
 
+	updateCity(city) {
+		this.city = city;
+		this.changeCity();
+	}
+
+	async changeCity() {
+		this.api.changeCity(this.city);
+		this.api.changeUnit(databaseController.getCurrentUnit());
 		try {
 			const response = await this.fetchWeather();
+			console.log(response);
 			renderController.updateWeather(response);
 			toast.makeToast({
 				type: "success",
 				title: "Success",
 				message: "Data fetched successfully",
 			});
+			return response;
 		} catch (error) {
 			toast.makeToast({
 				type: "error",
 				title: "Error",
 				message: "Error happened while fetching API",
 			});
-			console.log(error);
 		}
 	}
 
