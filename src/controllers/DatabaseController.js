@@ -1,8 +1,8 @@
 class DatabaseController {
 	constructor() {
-		if (!localStorage.getItem("data")) {
+		if (!localStorage.getItem("weatherAppData")) {
 			localStorage.setItem(
-				"data",
+				"weatherAppData",
 				JSON.stringify({
 					theme: "light",
 					unit: "metric",
@@ -12,11 +12,11 @@ class DatabaseController {
 	}
 
 	getActiveDb() {
-		return JSON.parse(localStorage.getItem("data"));
+		return JSON.parse(localStorage.getItem("weatherAppData"));
 	}
 
 	updateDb(data) {
-		localStorage.setItem("data", JSON.stringify(data));
+		localStorage.setItem("weatherAppData", JSON.stringify(data));
 	}
 
 	getCurrentUnit() {
