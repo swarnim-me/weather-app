@@ -2,13 +2,13 @@ import "./conditionPanel.css";
 import thermometerIcon from "../../assets/icons/conditions/thermometer.svg";
 import dropletIcon from "../../assets/icons/conditions/droplet.svg";
 import rainIcon from "../../assets/icons/conditions/cloud-rain.svg";
-import sunRainIcon from "../../assets/icons/conditions/cloud-sun-rain.svg";
+import visibilityIcon from "../../assets/icons/conditions/visibility.svg";
 import windIcon from "../../assets/icons/conditions/wind.svg";
 import waveIcon from "../../assets/icons/conditions/waves.svg";
 import gaugeIcon from "../../assets/icons/conditions/gauge.svg";
 import cloudIcon from "../../assets/icons/conditions/cloud.svg";
-import sunIcon from "../../assets/icons/conditions/sun.svg";
 import unitConvertor from "../../utils/UnitConvertor";
+import dewIcon from "../../assets/icons/conditions/dew.svg";
 
 class ConditionPanel {
 	constructor() {
@@ -36,9 +36,10 @@ class ConditionPanel {
 				unit: " %",
 			},
 			{
-				title: "Weather Type",
-				icon: sunRainIcon,
-				value: data.currentDay.weatherType,
+				title: "Visibility",
+				icon: visibilityIcon,
+				value: data.currentDay.visibility,
+				unit: " " + units.visibility,
 			},
 			{
 				title: "Wind Speed",
@@ -63,9 +64,9 @@ class ConditionPanel {
 				value: data.currentDay.cloudCover,
 			},
 			{
-				title: "UV Index",
-				icon: sunIcon,
-				value: data.currentDay.uvIndex,
+				title: "Dew",
+				icon: dewIcon,
+				value: data.currentDay.dew,
 			},
 		];
 		this.conditionsGridEle.innerHTML = "";
@@ -74,7 +75,7 @@ class ConditionPanel {
 			wrapperEle.classList.add("condition-item");
 
 			const iconEle = document.createElement("img");
-			iconEle.classList.add("condition-icon", "icon");
+			iconEle.classList.add("condition-icon");
 			iconEle.src = data.icon;
 
 			const conditionDataEle = document.createElement("div");
