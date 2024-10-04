@@ -1,0 +1,27 @@
+.spinner-wrapper {
+	top: 0;
+	background: var(--spinner-bg);
+	left: 0;
+	display: grid;
+	place-content: center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.spinner {
+	width: 100px;
+	animation: move 2s infinite ease-in-out;
+}
+
+@keyframes move {
+	0% {
+		transform: translate(-20px);
+	}
+	50% {
+		transform: translate(20px);
+	}
+	100% {
+		transform: translate(-20px);
+	}
+}

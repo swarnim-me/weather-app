@@ -6,6 +6,7 @@ import settings from "../components/Settings/Settings";
 import "../components/SearchBar/SearchBar";
 import "../components/WeeklyPanel/WeeklyPanel";
 import applicationController from "./ApplicationController";
+import spinner from "../components/Spinner/Spinner";
 
 class RenderController {
 	constructor() {
@@ -29,6 +30,14 @@ class RenderController {
 		} else {
 			this.body.classList.remove("dark-mode");
 		}
+	}
+
+	showSpinner() {
+		spinner.showSpinner();
+	}
+
+	hideSpinner() {
+		spinner.hideSpinner();
 	}
 
 	async updateDb(data) {

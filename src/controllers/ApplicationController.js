@@ -24,6 +24,7 @@ class ApplicationController {
 	async changeCity() {
 		this.api.changeCity(this.city);
 		this.api.changeUnit(databaseController.getCurrentUnit());
+		renderController.showSpinner();
 		try {
 			const response = await this.fetchWeather();
 			console.log(response);
@@ -34,12 +35,14 @@ class ApplicationController {
 				message: "Data fetched successfully",
 			});
 			return response;
-		} catch (error) {
+		} catch {
 			toast.makeToast({
 				type: "error",
 				title: "Error",
 				message: "Error happened while fetching API",
 			});
+		} finally {
+			renderController.hideSpinner();
 		}
 	}
 

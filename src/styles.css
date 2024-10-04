@@ -7,6 +7,7 @@
 	--card-clr: #f9f9f9;
 	--inverted-font-clr: #ffffff;
 	--breakpoint: 1200px;
+	--spinner-bg: #f0f0f071;
 }
 
 .dark-mode {
@@ -17,6 +18,7 @@
 	--dark-panel-clr: #252525;
 	--card-clr: #2e2e2e;
 	--inverted-font-clr: #ffffff;
+	--spinner-bg: #1c1c1cde;
 }
 
 .dark-mode .icon {
@@ -37,6 +39,7 @@
 }
 
 main {
+	position: relative;
 	min-height: 100vh;
 	max-width: 100vw;
 	background: var(--background-clr);
